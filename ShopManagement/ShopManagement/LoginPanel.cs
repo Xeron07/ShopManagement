@@ -34,7 +34,7 @@ namespace ShopManagement
 
             if (x)
             {
-                MessageBox.Show("Connection Successful");
+                MessageBox.Show("Connection Successfull");
             }
             else
             {
