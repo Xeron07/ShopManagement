@@ -38,7 +38,7 @@
       <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin">
-      <HintPath>..\..\..\..\..\apps\AdminOfPipeShop\view\bin\Debug\MaterialSkin.dll</HintPath>
+      <HintPath>..\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
