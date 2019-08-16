@@ -118,6 +118,7 @@
             this.logIn.TabIndex = 4;
             this.logIn.Text = "Log In";
             this.logIn.UseVisualStyleBackColor = false;
+            this.logIn.Click += new System.EventHandler(this.logIn_Click);
             // 
             // signUp
             // 
@@ -131,6 +132,7 @@
             this.signUp.TabIndex = 5;
             this.signUp.Text = "Sign Up";
             this.signUp.UseVisualStyleBackColor = false;
+            this.signUp.Click += new System.EventHandler(this.signUp_Click);
             // 
             // LoginPanel
             // 
