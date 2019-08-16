@@ -24,7 +24,25 @@ namespace ShopManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            loginPanel1.MainForm = this;
             loginPanel1.BringToFront();
+        }
+
+        public void ShowLoginPanel()
+        {
+            loginPanel1.MainForm = this;
+            loginPanel1.BringToFront();
+        }
+
+        public void ShowRegPanel()
+        {
+            registrationPanel1.MainForm = this;
+            registrationPanel1.BringToFront();
+        }
+
+        private void loginPanel1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

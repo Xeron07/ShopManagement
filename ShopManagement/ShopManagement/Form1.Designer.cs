@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UI = new System.Windows.Forms.Panel();
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.loginPanel1 = new ShopManagement.LoginPanel();
+            this.UI = new System.Windows.Forms.Panel();
+            this.registrationPanel1 = new ShopManagement.RegistrationPanel();
             this.panel1.SuspendLayout();
-            this.UI.SuspendLayout();
             this.MenuPanel.SuspendLayout();
+            this.UI.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,15 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 600);
             this.panel1.TabIndex = 0;
-            // 
-            // UI
-            // 
-            this.UI.Controls.Add(this.loginPanel1);
-            this.UI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UI.Location = new System.Drawing.Point(0, 27);
-            this.UI.Name = "UI";
-            this.UI.Size = new System.Drawing.Size(900, 573);
-            this.UI.TabIndex = 1;
             // 
             // MenuPanel
             // 
@@ -121,9 +113,31 @@
             this.loginPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.loginPanel1.Location = new System.Drawing.Point(0, 0);
+            this.loginPanel1.MainForm = null;
             this.loginPanel1.Name = "loginPanel1";
             this.loginPanel1.Size = new System.Drawing.Size(900, 573);
             this.loginPanel1.TabIndex = 0;
+            this.loginPanel1.Load += new System.EventHandler(this.loginPanel1_Load);
+            // 
+            // UI
+            // 
+            this.UI.Controls.Add(this.registrationPanel1);
+            this.UI.Controls.Add(this.loginPanel1);
+            this.UI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UI.Location = new System.Drawing.Point(0, 27);
+            this.UI.Name = "UI";
+            this.UI.Size = new System.Drawing.Size(900, 573);
+            this.UI.TabIndex = 1;
+            // 
+            // registrationPanel1
+            // 
+            this.registrationPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.registrationPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registrationPanel1.Location = new System.Drawing.Point(0, 0);
+            this.registrationPanel1.MainForm = null;
+            this.registrationPanel1.Name = "registrationPanel1";
+            this.registrationPanel1.Size = new System.Drawing.Size(900, 573);
+            this.registrationPanel1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -137,8 +151,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.UI.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
+            this.UI.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -151,6 +165,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel UI;
+        private RegistrationPanel registrationPanel1;
         private LoginPanel loginPanel1;
     }
 }
