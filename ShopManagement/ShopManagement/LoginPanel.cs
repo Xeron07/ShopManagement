@@ -38,6 +38,7 @@ namespace ShopManagement
             };
             if (!String.IsNullOrEmpty(u.Email) && !String.IsNullOrEmpty(u.Password))
             {
+
                 if (this.LoginBAL.CheckLogin(u))
                 {
                     if (this.LoginBAL.UserData.Email != null)
@@ -62,6 +63,9 @@ namespace ShopManagement
                 {
                     MessageBox.Show("Connection Error", "Oops!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+               // MessageBox.Show("Connection Successfull");
+
             }
             else
             {
