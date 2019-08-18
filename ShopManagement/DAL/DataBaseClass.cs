@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace DAL
 {
@@ -26,6 +27,21 @@ namespace DAL
                 }
             }
             return false;
+        }
+
+        public DataTable GetData(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, this.Conn);
+            
+
+            // create data adapter
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            da.Dispose();
+            return dt;
         }
     }
 }

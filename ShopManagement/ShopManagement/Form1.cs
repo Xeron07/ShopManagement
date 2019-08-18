@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BAL;
 
 namespace ShopManagement
 {
@@ -16,6 +17,8 @@ namespace ShopManagement
         {
             InitializeComponent();
         }
+
+        public User UserData { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,9 +43,22 @@ namespace ShopManagement
             registrationPanel1.BringToFront();
         }
 
+        public void ShowManagerHome()
+        {
+            this.managerHome1.UserLabel = "Welcome, " + this.UserData.Name;
+            this.managerHome1.MainForm = this;
+            this.managerHome1.BringToFront();
+        }
+
         private void loginPanel1_Load(object sender, EventArgs e)
         {
 
+        }
+        public void ShowEmployeeHome()
+        {
+            this.employeeHome1.MainForm = this;
+            this.employeeHome1.Username = "Welcome, " + this.UserData.Name;
+            this.employeeHome1.BringToFront();
         }
     }
 }
