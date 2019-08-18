@@ -30,16 +30,52 @@ namespace ShopManagement
 
         private void logIn_Click(object sender, EventArgs e)
         {
-            bool x = this.LoginBAL.CheckLogin();
-
-            if (x)
+           // bool x = this.LoginBAL.CheckLogin();
+            User u = new User()
             {
-                MessageBox.Show("Connection Successfull");
+                Email = this.emailValue.Text.Trim(),
+                Password=this.passwordField.Text.Trim()
+            };
+            if (!String.IsNullOrEmpty(u.Email) && !String.IsNullOrEmpty(u.Password))
+            {
+
+                if (this.LoginBAL.CheckLogin(u))
+                {
+                    if (this.LoginBAL.UserData.Email != null)
+                    {
+                        MessageBox.Show("Login SuccessFul");
+                        this.MainForm.UserData = this.LoginBAL.UserData;
+                        if (this.MainForm.UserData.Status.ToLower().Equals("manager"))
+                        {
+                            this.MainForm.ShowManagerHome();
+                        }
+                        else
+                        {
+                            this.MainForm.ShowEmployeeHome();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Email or password", "Wrong input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Connection Error", "Oops!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+               // MessageBox.Show("Connection Successfull");
+
             }
             else
             {
-                MessageBox.Show("Connection Failed");
+                MessageBox.Show("Please Give All Data","Oops!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+        }
+
+        private void emailValue_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

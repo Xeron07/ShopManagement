@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerHome.Designer.cs">
+      <DependentUpon>CustomerHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,19 +83,100 @@
     <Compile Include="LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeHome.Designer.cs">
+      <DependentUpon>EmployeeHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageProduct.Designer.cs">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagePurchase.Designer.cs">
+      <DependentUpon>ManagePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagerHome.Designer.cs">
+      <DependentUpon>ManagerHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseHIstory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PurchaseHIstory.Designer.cs">
+      <DependentUpon>PurchaseHIstory.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RegistrationPanel.Designer.cs">
       <DependentUpon>RegistrationPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SellProduct.Designer.cs">
+      <DependentUpon>SellProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateInformation.Designer.cs">
+      <DependentUpon>UpdateInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewCustomer.Designer.cs">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.Designer.cs">
+      <DependentUpon>ViewProduct.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerHome.resx">
+      <DependentUpon>CustomerHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeHome.resx">
+      <DependentUpon>EmployeeHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct.resx">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePurchase.resx">
+      <DependentUpon>ManagePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerHome.resx">
+      <DependentUpon>ManagerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,8 +187,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PurchaseHIstory.resx">
+      <DependentUpon>PurchaseHIstory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationPanel.resx">
       <DependentUpon>RegistrationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellProduct.resx">
+      <DependentUpon>SellProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInformation.resx">
+      <DependentUpon>UpdateInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomer.resx">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProduct.resx">
+      <DependentUpon>ViewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -108,6 +225,10 @@
     <ProjectReference Include="..\BAL\BAL.csproj">
       <Project>{cdb48ca5-3a08-470c-8fa3-2ba9a102049a}</Project>
       <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{E396BA21-3C75-4C83-B083-FAB5D72646AC}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
